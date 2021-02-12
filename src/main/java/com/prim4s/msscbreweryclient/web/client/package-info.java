@@ -1,0 +1,1 @@
+package com.prim4s.msscbreweryclient.web.client;

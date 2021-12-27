@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 
 @SpringBootTest
-class BreweryClientTest {
+public class BreweryClientTest {
 
     @Autowired
     BreweryClient breweryClient;
@@ -35,10 +35,7 @@ class BreweryClientTest {
         URI uri = breweryClient.saveBeerDto ( beerDto );
 
         assertNotNull ( uri );
-
-        System.out.println ( "################################################################################" );
-        System.out.println ( uri );
-        System.out.println ( "################################################################################" );
+        
     }
 
     @Test

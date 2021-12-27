@@ -17,7 +17,7 @@ import java.util.UUID;
 @ConfigurationProperties(value = "mss-brewery", ignoreInvalidFields = true)
 public class BreweryClient {
 
-    private final String BEER_PATH = "/api/v1/beer";
+    private final String BEER_PATH = "/api/v1/beer/";
 
     private String apihost;
 
@@ -36,11 +36,11 @@ public class BreweryClient {
     }
 
     public void updateBeerDto(UUID uuid, BeerDto beerDto) {
-        restTemplate.put ( apihost + BEER_PATH + "/" + uuid.toString (), beerDto );
+        restTemplate.put ( apihost + BEER_PATH  + uuid.toString (), beerDto );
     }
 
     public void deleteBeerDto(UUID uuid) {
-        restTemplate.delete ( apihost + BEER_PATH + "/" + uuid );
+        restTemplate.delete ( apihost + BEER_PATH  + uuid );
     }
 
     public void setApihost( String apihost ) {
